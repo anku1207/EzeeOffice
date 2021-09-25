@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.Player.AudioPlayerActivity">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/audio_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:controller_layout_id="@layout/exo_playback_control_view"/>
+
+    <Button
+        android:visibility="gone"
+        android:background="@drawable/ic_play_circle_filled_blue_24dp"
+        android:id="@+id/btn_play_pause"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+         />
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<androidx.cardview.widget.CardView
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="0.70"
+            android:padding="3dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="Group Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_group_manager_groupname"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Software"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_group_manager_groupid"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Software"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_group_manager_modify"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:paddingLeft="5dp"
+                android:drawablePadding="-15dp"
+                android:layout_marginBottom="3dp"
+                android:drawableLeft="@drawable/ic_pen_white"
+                android:textSize="10sp"
+                android:text="Modify"
+                android:layout_width="100dp"
+                android:layout_height="32dp" />
+            <Button
+                android:id="@+id/btn_group_manager_delete"
+                android:drawablePadding="-12dp"
+                android:textColor="@color/white"
+                android:paddingLeft="5dp"
+                android:background="@color/light_red"
+                android:drawableLeft="@drawable/ic_delete_white_24dp"
+                android:textSize="10sp"
+                android:text="Delete"
+                android:layout_width="100dp"
+                android:layout_height="32dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Delete Document"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_alert_delete_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="Are you sure you want to delete this document ?"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <Button
+                       android:visibility="gone"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/recycle_white_small"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        android:id="@+id/btn_per_delete_popup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@color/red"
+                        android:text="Permanent Delete"
+                        android:textColor="@color/white" />
+
+                   <Button
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:drawableLeft="@drawable/recycle_white_small"
+                        android:drawablePadding="5dp"
+                        android:textSize="13sp"
+                        android:id="@+id/btn_delete_popup"
+                        android:layout_width="110dp"
+                        android:layout_height="35dp"
+                        android:background="@color/red"
+                        android:text="Delete"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:textSize="13sp"
+                android:elevation="0dp"
+                android:layout_margin="5dp"
+                android:id="@+id/btn_close_delete_popup"
+                android:textColor="@color/red"
+                android:background="@color/transparent"
+                android:layout_gravity="right"
+                android:text="cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.FaqActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cv_faq_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="FAQ"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:id="@+id/nestedscrollview_webview"
+        android:visibility="gone"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <WebView
+            android:id="@+id/webview_faq"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:visibility="visible"
+        android:id="@+id/progressBar_webview"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:indeterminate="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+
+</LinearLayout>

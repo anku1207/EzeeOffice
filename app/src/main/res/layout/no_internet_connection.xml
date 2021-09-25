@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        app:srcCompat="@drawable/ic_no_internet_connection"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:text="No Internet Found "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        android:text="Check your internet connection and try again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

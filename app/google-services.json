@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1049769370635",
+    "firebase_url": "https://ezeeoffice-c3856.firebaseio.com",
+    "project_id": "ezeeoffice-c3856",
+    "storage_bucket": "ezeeoffice-c3856.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049769370635:android:4b572bc9561a3b6e",
+        "android_client_info": {
+          "package_name": "in.cbslgroup.ezeeoffice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049769370635-j8sl423tfc5pnp03t3ircklsld0c8qqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr-8-pmk_np1KXyc6J7QEs8zSaC7E7yT0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

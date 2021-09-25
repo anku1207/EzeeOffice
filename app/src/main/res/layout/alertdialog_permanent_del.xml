@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_alert_permanent_del_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Permanent Delete Document"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_recyclebin_perm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Are you sure you want to permanently delete this document ?"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/btn_no_pDel_popup"
+                        android:background="@color/white"
+                        android:text="no"
+                        android:textColor="@color/red"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:background="@color/white"
+                        android:id="@+id/btn_yes_pDel_popup"
+                        android:text="Yes"
+                        android:textColor="@color/red"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

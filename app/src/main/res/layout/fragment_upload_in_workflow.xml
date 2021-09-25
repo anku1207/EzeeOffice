@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Upload.UploadInWorkflowFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_select_workflowform"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_upload_in_workflow_select_workflow"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_margin="3dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Select Worklflow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/grey">
+
+
+
+                        <Spinner
+                            android:id="@+id/sp_upload_in_workflow_select_workflow"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"></Spinner>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_upload_in_workflow_select_step"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Select Step"
+                        android:layout_margin="3dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/grey">
+
+                        <Spinner
+                            android:id="@+id/sp_upload_in_workflow_select_step"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_upload_in_workflow_select_task"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+
+                        android:layout_margin="3dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Select Task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/grey">
+
+                        <Spinner
+                            android:id="@+id/sp_upload_in_workflow_select_task"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"></Spinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--<Button
+            android:elevation="5dp"
+            android:textColor="@color/white"
+            android:text="Submit"
+            android:background="@color/colorPrimary"
+            android:layout_margin="15dp"
+            android:layout_below="@+id/cv_select_workflowform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />-->
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_fragmemt_verify_and_upload_buttons"
+            android:layout_alignParentBottom="true"
+            android:padding="3dp"
+            android:layout_margin="5dp"
+            android:layout_weight="0.10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:visibility="visible"
+                android:shadowColor="@color/grey"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="left"
+                android:layout_weight="0.2"
+                android:text="back" />
+
+            <View
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:background="@color/white" />
+
+            <Button
+                android:enabled="false"
+                android:visibility="visible"
+                android:shadowColor="@color/grey"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_btn_enable_disable"
+                android:id="@+id/submit_workflow_doc_upload"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_weight="0.2"
+                android:text="Sumbit" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

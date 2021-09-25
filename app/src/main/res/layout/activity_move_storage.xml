@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Dms.MoveStorageActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_storage_management_movestorage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_cancel_white_24dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Move/Copy Storage"
+                app:titleTextColor="@color/white">
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <TextView
+                android:id="@+id/move_copy_storage_alloted_popup"
+                android:gravity="center_vertical"
+                android:drawablePadding="25dp"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:text="Storage Alloted"
+                android:drawableRight="@drawable/ic_arrow_drop_down_white_24dp"
+                android:layout_marginLeft="65dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+ <!--   <android.support.v4.widget.NestedScrollView
+        android:background="@color/colorPrimary"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+                <LinearLayout
+
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:padding="10dp"
+                    android:weightSum="1"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textSize="14dp"
+                        android:layout_weight="0.3"
+                        android:text="Move Folder/File : "
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/tv_move_storage_foldername"
+                        android:textSize="14dp"
+                        android:layout_weight="0.7"
+                        android:text=" User Manual Documents"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>-->
+
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/cv_move_storage_rv"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    <LinearLayout
+                android:id="@+id/ll_assignmetadata_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="16dp"
+                    android:textStyle="bold"
+                    android:text="Move To :"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_delete_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/round_corner_background"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+
+                        android:id="@+id/move_storage_spinner"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp">
+
+                    </Spinner>
+
+            &lt;!&ndash;        <Button
+                        android:id="@+id/btn_assignmetadata_addnewspinner"
+                        android:text="dynamic spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />&ndash;&gt;
+
+                </LinearLayout>
+
+
+            </LinearLayout>-->
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_weight="0.20"
+                android:padding="10dp"
+                android:id="@+id/iv_movestorage_list"
+                app:srcCompat="@drawable/ic_arrow_back_blue_24dp"
+                android:layout_width="0dp"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:layout_weight="0.80"
+                android:textSize="16dp"
+                android:id="@+id/tv_move_storage_fname_previous"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_move_storage_slid_previous"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_rv_move_storage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/grey"
+            android:id="@+id/rv_move_storage_hori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_move_storage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_movestorage_nofilefound"
+        android:visibility="visible"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/ic_storage_darkblue_24dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="TODO" />
+        <TextView
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="No Directory Found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ProgressBar
+
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:id="@+id/progressBar_move_storage"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+
+
+
+
+</LinearLayout>

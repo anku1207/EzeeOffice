@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true">
+
+   <ScrollView
+       android:fillViewport="true"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="130dp"
+               android:background="@drawable/diagonal_layout_blue_half_rect"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:textStyle="bold"
+                   android:text="Edit Profile"
+                   android:textColor="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+               <ImageView
+                   android:layout_marginTop="15dp"
+                   android:layout_gravity="center"
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   app:srcCompat="@drawable/ic_edit_profile_icon"
+                   android:contentDescription="TODO" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="10dp">
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/til_edit_profile_firstname"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tie_edit_profile_firstname"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="5dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginTop="10dp"
+                       android:drawablePadding="5dp"
+                       android:hint="First Name"
+                       android:inputType="textAutoComplete"
+                       android:maxLines="1"
+                       android:padding="10dp"
+                       android:textColorHint="@color/colorPrimary"
+                       android:textCursorDrawable="@color/colorPrimary"
+                       android:textSize="15sp" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/til_edit_profile_lastname"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   app:passwordToggleEnabled="true">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tie_edit_profile_lastname"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginTop="10dp"
+                       android:drawablePadding="5dp"
+                       android:hint="Last Name"
+                       android:maxLines="1"
+                       android:padding="10dp"
+                       android:textColorHint="@color/colorPrimary"
+                       android:textCursorDrawable="@color/colorPrimary"
+                       android:textSize="15sp"
+                       app:passwordToggleEnabled="true" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/til_edit_profile_email"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:passwordToggleEnabled="true">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:background="@color/transparent"
+                       android:enabled="true"
+                       android:focusable="false"
+                       android:id="@+id/tie_edit_profile_email"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginTop="10dp"
+                       android:drawablePadding="5dp"
+                       android:hint="Email Id"
+                       android:maxLines="1"
+                       android:padding="10dp"
+                       android:textColorHint="@color/colorPrimary"
+                       android:textCursorDrawable="@color/colorPrimary"
+                       android:textSize="15sp"
+                       app:passwordToggleEnabled="true" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/til_edit_profile_contact"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:passwordToggleEnabled="true">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tie_edit_profile_contact"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginTop="10dp"
+                       android:drawablePadding="5dp"
+                       android:hint="Contact"
+                       android:inputType="number"
+                       android:maxLength="10"
+                       android:maxLines="1"
+                       android:padding="10dp"
+                       android:textColorHint="@color/colorPrimary"
+                       android:textCursorDrawable="@color/colorPrimary"
+                       android:textSize="15sp"
+                       app:passwordToggleEnabled="true" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/til_edit_profile_designation"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:passwordToggleEnabled="true">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tie_edit_profile_designation"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginTop="10dp"
+                       android:drawablePadding="5dp"
+                       android:hint="Designation"
+                       android:maxLines="1"
+                       android:padding="10dp"
+                       android:textColorHint="@color/colorPrimary"
+                       android:textCursorDrawable="@color/colorPrimary"
+                       android:textSize="15sp"
+                       app:passwordToggleEnabled="true" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+
+               <LinearLayout
+                   android:layout_marginTop="10dp"
+                   android:layout_marginBottom="10dp"
+                   android:padding="5dp"
+                   android:gravity="right"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <Button
+                       android:textSize="12sp"
+                       android:id="@+id/btn_edit_profile_cancel"
+                       android:textColor="@color/white"
+                       android:background="@color/colorPrimary"
+                       android:layout_width="wrap_content"
+                       android:layout_height="40dp"
+                       android:layout_gravity="center"
+                       android:text="cancel"
+                       />
+                   <Button
+                       android:textSize="12sp"
+                       android:layout_marginLeft="10dp"
+                       android:id="@+id/btn_edit_profile_save"
+                       android:layout_width="150dp"
+                       android:layout_height="40dp"
+                       android:layout_gravity="center"
+                       android:background="@color/colorPrimaryDark"
+                       android:text="save changes"
+                       android:textColor="@color/white" />
+               </LinearLayout>
+
+
+
+
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+   </ScrollView>
+
+
+
+
+</androidx.cardview.widget.CardView>

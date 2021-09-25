@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.NotificationActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:navigationIcon="@drawable/ic_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Notifications"
+                app:titleTextColor="@color/white">
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rv_notification_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:visibility="gone"
+       android:id="@+id/pb_notification"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_no_notification_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_notifications_active_blue_100dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:text="No Notification Found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

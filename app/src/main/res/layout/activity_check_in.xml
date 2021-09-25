@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Dms.CheckInActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_checkin_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_checkin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:navigationIcon="@drawable/ic_close_black_24dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:subtitle="@string/app_name"
+                app:subtitleTextColor="@color/colorPrimary"
+                app:title="Update MetaData of File"
+                app:titleTextColor="@color/colorPrimary">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_weight="0.80"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/nestedscrollview_checkin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_checkin_toolbar"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true">
+
+                    <ScrollView
+                        android:fillViewport="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:background="@color/colorPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:padding="10dp"
+                                android:text="Add Metdata"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_margin="10dp"
+                                android:id="@+id/ll_checkin_metalist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:visibility="gone"
+                                    android:id="@+id/rv_checkin_fields"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+
+                                <ProgressBar
+                                    android:visibility="gone"
+                                    android:backgroundTintMode="multiply"
+                                    android:id="@+id/progressbar_checkin"
+                                    android:layout_gravity="center"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp" />
+
+                                <TextView
+                                    android:padding="10dp"
+                                    android:id="@+id/tv_checkin_no_meta_found"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/red"
+                                    android:layout_gravity="center"
+                                    android:text="No metadata found"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                    </ScrollView>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_checkin_checkout_attach_doc"
+                            android:buttonTint="@color/white"
+                            android:background="@color/colorPrimary"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="Update Document (optional)"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/ll_checkin_checkout_choose_doc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:orientation="vertical"
+                                android:background="@drawable/diagonal_layout_blue_half_rect"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="230dp">
+
+                                <ImageView
+                                    android:visibility="visible"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/iv_checkin_filetype"
+                                    app:srcCompat="@drawable/unsupported_file"
+                                    android:layout_width="150dp"
+                                    android:layout_height="200dp"
+                                    android:contentDescription="TODO" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:visibility="gone"
+                                    android:id="@+id/cv_checkin_upload_camera"
+                                    app:cardBackgroundColor="@color/green_normal"
+                                    app:cardElevation="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="150dp"
+                                    android:layout_height="200dp">
+
+                                    <LinearLayout
+                                        android:layout_margin="3dp"
+                                        android:background="@color/grey_new"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:cropToPadding="true"
+                                            android:id="@+id/iv_checkin_upload_camera"
+                                            android:visibility="visible"
+                                            android:layout_gravity="center"
+                                            app:srcCompat="@drawable/png"
+                                            android:layout_width="150dp"
+                                            android:layout_height="200dp"
+                                            android:contentDescription="TODO" />
+                                    </LinearLayout>
+
+
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="5dp"
+                                    app:cardUseCompatPadding="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:weightSum="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:textStyle="bold"
+                                            android:hint="No File Selected"
+                                            android:gravity="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="10sp"
+                                            android:id="@+id/tv_upload_filepath_checkin"
+                                            android:background="@color/grey"
+                                            android:layout_weight="0.7"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent" />
+
+
+                                        <Button
+                                            android:layout_weight="0.3"
+                                            android:id="@+id/btn_upload_choose_file_checkin"
+                                            android:layout_gravity="center"
+                                            android:textSize="13sp"
+                                            android:textColor="@color/white"
+                                            android:background="@color/colorPrimary"
+                                            android:text="Choose File"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            />
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--<LinearLayout-->
+                            <!--android:visibility="visible"-->
+                            <!--android:id="@+id/ll_checkin_checkout_choose_doc"-->
+                            <!--android:padding="10dp"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:weightSum="1">-->
+
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/tv_upload_filepath_checkin"-->
+                                <!--android:layout_width="0dp"-->
+                                <!--android:layout_height="32dp"-->
+                                <!--android:layout_weight="0.7"-->
+                                <!--android:background="@color/grey"-->
+                                <!--android:gravity="center"-->
+                                <!--android:hint="No File Selected"-->
+                                <!--android:textColor="@color/black"-->
+                                <!--android:textSize="12sp"-->
+                                <!--android:textStyle="bold" />-->
+
+
+                            <!--<Button-->
+
+                                <!--android:id="@+id/btn_upload_choose_file_checkin"-->
+                                <!--android:layout_width="0dp"-->
+                                <!--android:layout_height="32dp"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:layout_weight="0.3"-->
+                                <!--android:background="@color/colorPrimary"-->
+                                <!--android:text="Choose File"-->
+                                <!--android:textColor="@color/white"-->
+                                <!--android:textSize="12sp" />-->
+
+                        <!--</LinearLayout>-->
+
+
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:background="@color/grey"
+            android:padding="3dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Button
+                android:layout_weight="0.5"
+                android:id="@+id/btn_checkin_cancel"
+                android:textSize="13dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                android:text="cancel"
+                android:textColor="@color/white"
+
+                />
+
+            <Button
+                android:layout_weight="0.5"
+                android:textSize="13dp"
+                android:id="@+id/btn_checkin_savechanges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/light_red"
+                android:text="Save changes"
+                android:textColor="@color/white"
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

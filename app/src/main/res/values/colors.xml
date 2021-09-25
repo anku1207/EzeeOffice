@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008ECC</color>
+    <color name="colorPrimaryDark">#016E9E</color>
+    <color name="colorAccent">#016E9E</color>
+    <color name="grey">#aae2e1e1</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue_light">#39a2cc</color>
+    <color name="green">#dd1bd203</color>
+    <color name="green_normal">#18c202</color>
+    <color name="green_dark">#17ac03</color>
+    <color name="mustard">#dacc03</color>
+    <color name="yellow">#f2e301</color>
+    <color name="yellow_dark">#efe111</color>
+    <color name="light_yellow">#ffbd4a</color>
+    <color name="red">#ff0400</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#939292</color>
+    <color name="black_blur">#8E000000</color>
+    <color name="light_blue_disable">#7f2ebeef</color>
+    <color name="dark_grey_2">#7b7a7a</color>
+    <color name="light_red">#FFF74F4D</color>
+    <color name="tranparent_blue">#01009ec6</color>
+    <color name="tranparent_grey">#01393939</color>
+    <color name="grey_new">#e1e0e0</color>
+    <color name="green_ezzepea">#0baf20</color>
+    <color name="red_fade">#a0f74f4d</color>
+    <color name="colorprimarydark_disabled">#a4259dc6</color>
+    <color name="purple">#d071f5</color>
+    <color name="orange">#fa9f01</color>
+    <color name="graph_blue">#5d9cec</color>
+    <color name="graph_pink">#fb6d9d</color>
+    <color name="grey_light">#8df1f1f1</color>
+
+</resources>

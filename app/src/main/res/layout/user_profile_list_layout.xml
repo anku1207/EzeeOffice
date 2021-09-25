@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.70"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_profilename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Software"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_profileid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Software"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_user_profile_modify"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:drawableLeft="@drawable/ic_pen_white"
+                    android:drawablePadding="-15dp"
+                    android:paddingLeft="5dp"
+                    android:text="Modify"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_user_profile_delete"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:background="@color/light_red"
+                    android:drawableLeft="@drawable/ic_delete_white_24dp"
+                    android:drawablePadding="-12dp"
+                    android:paddingLeft="5dp"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_user_profile_dashboard_mydms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_dashboard_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_dashboard_query"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_dashboard_num_of_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_dashboard_num_of_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_memory_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_create_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_modify_userlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_delete_userlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_view_userlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_storage_auth_plcy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_mail_lists"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_email_config"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_online_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_add_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_delete_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_modify_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_view_group_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_role_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_role_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_role_modi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_role_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_bulk_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_add_metadata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_view_metadata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_assign_metadata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_create_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_create_child_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_upload_doc_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_modify_storage_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_delete_storage_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_move_storage_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_copy_storage_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_view_user_audit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_workflow_audit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_metadata_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_metadata_quick_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_file_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_file_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_file_anot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_file_anot_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_file_coment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_tif_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_pdf_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_doc_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_excel_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_audio_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_video_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_image_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_pdf_annotation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_file_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_delete_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_update_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_export_csv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_move_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_copy_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_share_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_bulk_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_checkin_checkout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_pdf_print"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_pdf_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_view_faq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_add_faq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_edit_faq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_del_faq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_view_recycle_bin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_restore_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_permanent_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_shared_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_share_with_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_profile_feedback_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

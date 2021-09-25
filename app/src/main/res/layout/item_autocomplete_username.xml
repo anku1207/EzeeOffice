@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:background="@drawable/chip_background"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/ic_person_darkblue_24dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null" />
+
+    <in.cbslgroup.ezeeoffice.Chip.TokenTextView
+        android:padding="5dp"
+        android:id="@+id/token_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Ankit"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+    <in.cbslgroup.ezeeoffice.Chip.TokenTextView
+        android:visibility="gone"
+        android:padding="5dp"
+        android:id="@+id/token_text_slid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Ankit"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,214 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "in.cbslgroup.ezeeoffice"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 2
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+    }
+
+   /* packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }*/
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    /*implementation fileTree(dir: 'libs', include: ['*.jar'])
+    com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'*/
+
+    /*implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+
+
+
+    implementation 'com.android.volley:volley:1.1.1'
+
+    implementation 'com.shuhart.stepview:stepview:1.5.1'
+
+    implementation 'net.gotev:uploadservice:3.4.2'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+    //File picker library
+    // implementation 'com.nbsp:library:1.8'
+    implementation 'com.nbsp:materialfilepicker:1.9.1'
+
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation 'itext:itext:1.3.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //implementation 'com.github.jakebonk:ChipView:1.0.1'
+    implementation 'com.splitwise:tokenautocomplete:2.0.8@aar'
+
+
+    implementation 'com.github.qapqap:TimelineView:v1.6'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    // Dexter runtime permissions
+    implementation 'com.karumi:dexter:4.2.0'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.2.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+    implementation 'com.applandeo:material-calendar-view:1.5.0'
+    //implementation 'com.github.stfalcon:smsverifycatcher:0.3.2'
+
+    //sweet alert
+    //implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+    //exoplayer
+    //implementation "com.google.android.exoplayer:exoplayer:2.6.0"
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0-rc02'
+
+    //implementation 'com.google.android.material:material:1.0.0'
+
+    *//* implementation 'com.google.android.exoplayer:exoplayer-core:2.9.6'
+     implementation 'com.google.android.exoplayer:exoplayer-dash:2.9.6'
+     implementation 'com.google.android.exoplayer:exoplayer-ui:2.9.6'*//*
+
+    //implementation "biz.laenger.android:vpbs:0.0.5"
+    //implementation 'com.jjoe64:graphview:4.2.2';
+    //implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
+    //implementation 'com.github.florent37:diagonallayout:1.0.9'*/
+
+
+
+
+
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    implementation 'com.android.support:design:29.0.0'
+
+
+
+    //Material design lib for androidx
+    implementation 'com.google.android.material:material:1.2.1'
+
+    //volley for network calls
+    implementation 'com.android.volley:volley:1.1.1'
+
+    //step view library for step view
+    //implementation 'com.shuhart.stepview:stepview:1.2.6'
+    implementation 'com.shuhart.stepview:stepview:1.5.1'
+
+    //library for uploading files
+    implementation 'net.gotev:uploadservice:3.4.2'
+
+    //PDF viewer library
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+
+    //File picker library
+    // implementation 'com.nbsp:library:1.8'
+    implementation 'com.nbsp:materialfilepicker:1.9.1'
+
+
+    //Glide library for image processing
+    implementation 'com.squareup.okhttp3:okhttp:4.2.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+
+    //Imageview library for photoview with custom gestures and zoom features
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    //Itext library for pdf tasks
+    implementation 'itext:itext:1.3.1'
+
+    //Libary for circular imgaeview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Chipview library for chip in android
+    implementation 'com.github.jakebonk:ChipView:1.0.1'
+    implementation "com.splitwise:tokenautocomplete:2.0.8@aar"
+
+    //Image cropping library
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    // Dexter runtime permissions
+    implementation 'com.karumi:dexter:4.2.0'
+
+    //Firebase lib for firebase operation like push notification etc
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+
+    //Library for showcasing the app flow
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.2.0'
+
+    //MP chart library for charts and graphs
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+
+    //Layout mamnager library for recyclerview for different custom layout
+    implementation 'com.azoft.carousellayoutmanager:carousel:1.2.4'
+
+    //Android jetpack lib for navigation stuff in fragmet and activity
+    def nav_version = "2.3.2"
+    // Java
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    //for smooth expanding animation
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+
+
+    //Retrofit and GSON
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+    //enable multidex
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //for crash report
+    implementation 'com.github.RohitSurwase.UCE-Handler:uce_handler:1.4'
+
+    implementation 'com.applandeo:material-calendar-view:1.5.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.9.6'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.9.6'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.9.6'
+}

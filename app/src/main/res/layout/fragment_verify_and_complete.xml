@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Upload.VerifyAndCompleteFragment">
+
+    <ScrollView
+        android:id="@+id/sv_verify_and_upload"
+        android:layout_above="@+id/ll_fragmemt_upload_in_workflow_buttons"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_frag_verify_complete_dynamicview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="Size(KB)"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_frag_verify_complete_filesize"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="File Format"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_frag_verify_complete_fileformat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="File"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_frag_verify_complete_filename"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="Page Count"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tv_frag_verify_complete_pagecount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <CheckBox
+
+                android:id="@+id/upload_frag_verify_checkbox"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:text="I hereby verify the above Document and proceed to upload."
+                android:textColor="@color/colorPrimary"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:layout_margin="6dp"
+                android:enabled="false"
+                android:id="@+id/btn_upload_file_storage"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:background="@drawable/selector_btn_enable_disable"
+                android:text="Upload file in Storage"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_margin="6dp"
+                android:enabled="false"
+                android:id="@+id/btn_upload_file_workflow"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:background="@drawable/selector_btn_enable_disable"
+                android:text="Upload file in Workflow"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_fragmemt_upload_in_workflow_buttons"
+        android:layout_alignParentBottom="true"
+        android:padding="3dp"
+        android:layout_margin="5dp"
+        android:layout_weight="0.10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:visibility="visible"
+            android:shadowColor="@color/grey"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="left"
+            android:layout_weight="0.2"
+            android:text="back" />
+
+        <View
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:background="@color/white" />
+
+        <Button
+            android:visibility="invisible"
+            android:shadowColor="@color/grey"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:id="@+id/next"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_weight="0.2"
+            android:text="next" />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

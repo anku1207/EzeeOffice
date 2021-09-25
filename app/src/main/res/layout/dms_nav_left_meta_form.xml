@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_dmsactivity_nav_left_with_cancel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_margin="5dp"
+            android:id="@+id/iv_nav_left_del_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_cancel_blue_48dp"
+            android:contentDescription="TODO" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_corner_background">
+
+            <Spinner
+
+                android:id="@+id/dyanamic_spinner_condition_nav_left_form_with_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_corner_background">
+
+            <Spinner
+                android:id="@+id/dyanamic_spinner_metadata_nav_left_form_with_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_corner_background">
+
+            <EditText
+                android:background="@color/transparent"
+                android:id="@+id/et_dynamic_text_search_nav_left_form_with_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:hint="Enter Text Here"
+                android:padding="4dp"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

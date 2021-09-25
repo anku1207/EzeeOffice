@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/file_view_48"
+        android:id="@+id/action_search_attendance"
+        android:title="View File"
+        />
+
+
+    <item
+        android:icon="@drawable/file_view_32"
+        android:id="@+id/action_attendance_panel"
+        android:title="View Metadata"
+        />
+
+    <item
+        android:visible="true"
+        android:icon="@drawable/ic_share_grey_24dp"
+        android:id="@+id/action_attendance_confirm_atten"
+        android:title="Share File"
+        />
+
+    <item
+        android:icon="@drawable/ic_delete_black_24dp"
+        android:id="@+id/action_attendance_info"
+        android:title="Delete File"
+        />
+
+    <item
+        android:icon="@drawable/checkin_small"
+        android:title="Checkin"
+        />
+    <item
+        android:icon="@drawable/checkout_small"
+        android:title="Checkout"
+        />
+
+    <item
+        android:icon="@drawable/version_small"
+        android:title="View Version"
+        />
+
+
+</menu>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.RecycleBinActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout_recyclebin_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Recycle Management"
+            android:id="@+id/toolbar_recyclebin"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!--    <android.support.v7.widget.CardView
+                android:theme="@style/AppTheme.PopupOverlay"
+                app:cardCornerRadius="23dp"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.SearchView
+                        app:iconifiedByDefault="false"
+                        app:queryHint="Search.."
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.SearchView>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>-->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_recyclebin_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_above="@id/tv_recyclebin_resultsfound"
+                    android:visibility="visible"
+                    android:id="@+id/rv_recyclebin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/tv_recyclebin_resultsfound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="7dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:drawableTop="@drawable/ic_insert_drive_file_grey_48dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="No File Found"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/tv_recyclebin_filter_no_file_found"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_recyclebin_nofilefound"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/recycle_red"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="TODO" />
+                <TextView
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:text="Empty Recyclebin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:id="@+id/progressBar_recyclebin"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

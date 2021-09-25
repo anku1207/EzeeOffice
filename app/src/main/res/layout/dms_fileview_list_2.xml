@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        app:cardUseCompatPadding="true">
+
+        <!--  <View
+              android:layout_width="match_parent"
+              android:layout_height="3dp"
+              android:background="@color/colorPrimary" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/iv_filetype"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="TODO"
+                        app:srcCompat="@drawable/file_small" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_filename"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0.88"
+                            android:padding="3dp"
+                            android:text="Gradle.bat"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_dms_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.12"
+                            android:visibility="invisible" />
+
+
+                    </LinearLayout>
+
+
+                    <!--   <TextView
+                           android:padding="3dp"
+                           android:textSize="13sp"
+                           android:text="Ankit.txt"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="File size"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="No of pages"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_filesize"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="24kb"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+
+                            android:id="@+id/tv_dms_list_NoOfPages"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="Uploaded By"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="Uploaded Date"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_uploadedby"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="Ankit"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_uploadedDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="24-01-1996 23:00:00"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_ischecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_filepath"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_checkinstatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_versionstatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_filetype"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_docname"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_metadata"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dms_list_docid"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/dark_grey" />
+
+                <LinearLayout
+                    android:id="@+id/ll_dms_fileview_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/iv_version"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="TODO"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/version" />
+
+                    <ProgressBar
+                        android:id="@+id/progressbar_version"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/iv_checkin"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/checkin" />
+
+                        <ImageView
+                            android:id="@+id/iv_checkout"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/checkout" />
+
+                        <ImageView
+                            android:id="@+id/iv_copy_file"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/copy" />
+
+                        <ImageView
+                            android:id="@+id/iv_move_file"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/move" />
+
+                        <ImageView
+                            android:id="@+id/iv_open_file"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:srcCompat="@drawable/fileview" />
+
+                        <ImageView
+                            android:id="@+id/iv_show_metadata"
+                            android:layout_width="25dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:srcCompat="@drawable/ic_remove_red_eye_blue_24dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_delete"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/ic_delete_black_24dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_share"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_share_grey_24dp" />
+
+                        <ImageView
+
+                            android:id="@+id/three_dots"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="TODO"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_more_vert_grey_24dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

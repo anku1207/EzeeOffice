@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="2dp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_weight="0.20"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="3dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/iv_task_track_action"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/task_track_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="70dp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_weight="0.80"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:text="Ticket Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_TicketId"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:text="MRF_54_1531909918"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_weight="0.50"
+                    android:padding="2dp"
+                    android:text="Ticket Date Time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+
+                    android:layout_weight="0.50"
+                    android:padding="3dp"
+                    android:textStyle="bold"
+                    android:text="Task Status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_TicketDate"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_weight="0.50"
+                    android:padding="3dp"
+                    android:text="2018-07-07 12:42:15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_TaskStatus"
+                        android:layout_weight="0.50"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:background="@drawable/taskstatus_background"
+                        android:textColor="@color/white"
+                        android:text="Pending"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_task_track_docid"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+         <View
+             android:layout_marginTop="10dp"
+             android:background="@color/dark_grey"
+             android:layout_width="match_parent"
+             android:layout_height="2dp"/>
+
+            <LinearLayout
+
+                android:gravity="right"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+                    <Button
+
+                        android:layout_weight="0.5"
+                        android:padding="7dp"
+                        android:drawableLeft="@drawable/ic_create_white_15dp"
+                        android:visibility="visible"
+                        android:textColor="@color/white"
+                        android:background="@drawable/taskstatus_reinitiate_bg"
+                        android:textAllCaps="false"
+                        android:id="@+id/btn_task_track_reinitiatework"
+                        android:layout_marginTop="5dp"
+                        android:textSize="10sp"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:text="ReIntiate Workflow"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:drawableStart="@drawable/ic_create_white_15dp" />
+
+                <Button
+                    android:drawablePadding="8dp"
+                    android:layout_weight="0.5"
+                    android:padding="7dp"
+                    android:drawableLeft="@drawable/ic_insert_drive_file_white_15dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/taskstatus_viewdoc_bg"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_task_track_viewdocument"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:text="View Document"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:drawableStart="@drawable/ic_insert_drive_file_white_15dp" />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

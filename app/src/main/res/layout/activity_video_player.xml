@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".Activity.Player.VideoPlayerActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_video_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:navigationIcon="@drawable/ic_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Video Player"
+            app:titleTextColor="@color/white">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/pb_video_view"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:theme="@style/Progressbar.White" />
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

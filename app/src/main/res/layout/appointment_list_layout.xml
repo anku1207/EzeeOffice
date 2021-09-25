@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_appointment_list_layout_main"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_todo_list"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/appointment" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_todo_list"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_appointment_list_layout_taskname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Hey this is a Appointment"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_appointment_list_layout_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="date" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/appointment_list_decorator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/grey" />
+
+</LinearLayout>

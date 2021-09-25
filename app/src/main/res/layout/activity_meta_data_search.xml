@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".Activity.Search.MetaDataSearchActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_search_metasearch_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_metadata_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Meta Data Search"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/ll_metasearch_select_storage_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_metadatasearch_requiredfields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tv_metadatasearch_storagename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:text="Storage name"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ll_metasearch_select_storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/grey"
+                    android:clickable="true"
+                    android:padding="7dp"
+                    android:weightSum="1">
+                    <!-- <Spinner
+                         android:id="@+id/spinner_metadatasearch_storagename"
+                         android:padding="5dp"
+                         android:layout_width="match_parent"
+                         android:layout_height="40dp">
+
+                     </Spinner>-->
+
+                    <TextView
+                        android:id="@+id/tv_spinner_dropdown_setStoragename"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.90"
+                        android:gravity="center_vertical"
+                        android:hint="Select Storage"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_spinner_dropdown_setSlid"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.90"
+                        android:gravity="center_vertical"
+                        android:hint=" Select Storage"
+                        android:inputType="textMultiLine"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_spinner_dropdown_setStoragename_arrow"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignRight="@+id/iv_spinner_dropdown_setStoragename"
+                        android:layout_weight="0.10"
+                        android:scaleType="center"
+                        app:srcCompat="@drawable/ic_arrow_drop_down_darkgrey_24dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_above="@id/btn_metadatasearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/iv_metasearch_add_form"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_margin="10dp"
+                            app:srcCompat="@drawable/ic_add_circle_blue_24dp" />
+
+                        <TextView
+                            android:id="@+id/tv_meta_search_selectmetadata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:text="Select Metadata"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/grey"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_meta_search_selectmetadata_hint"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:hint="No Meta Data"
+                                android:textSize="15dp" />
+
+                            <ProgressBar
+                                android:id="@+id/progressbar_metasearch_selectMetadata"
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:visibility="gone" />
+
+                            <Spinner
+                                android:id="@+id/spinner_metadatasearch_select_metadata"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:padding="5dp"
+                                android:visibility="gone">
+
+                            </Spinner>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_meta_search_selectcondition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:text="Select Condition"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@color/grey">
+
+                            <Spinner
+                                android:id="@+id/spinner_metadatasearch_select_condition"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:padding="5dp">
+
+                            </Spinner>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_meta_search_enterText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:text="Enter Text"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/et_metadatasearch_enter_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@color/grey"
+                            android:cursorVisible="false"
+                            android:hint="Enter Text"
+                            android:maxLines="1"
+                            android:padding="12dp"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_metadatasearch_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="visible"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btn_metadatasearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:drawablePadding="12dp"
+            android:elevation="20dp"
+            android:padding="10dp"
+            android:text="search"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+
+
+
+    `
+
+</LinearLayout>

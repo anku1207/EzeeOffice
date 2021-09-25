@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Logout"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+
+
+                    android:text="Are you sure you want to logout ?"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:gravity="left"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:background="@color/white"
+                        android:id="@+id/btn_no_logout_popup"
+                        android:text="no"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:background="@color/white"
+                        android:id="@+id/btn_yes_logout_popup"
+                        android:text="Yes"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

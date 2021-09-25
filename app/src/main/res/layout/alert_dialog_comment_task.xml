@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+
+    >
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/alertdialog_tv_comment_task_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Add/View Notes"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+
+            <LinearLayout
+                android:id="@+id/alertdialog_tv_comment_main"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Note Sheet"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_comment_task_enter_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_rect_4"
+                    android:hint="Enter your text here"
+                    android:padding="10dp"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alertdialog_tv_comment_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:scrollbars="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/rv_comment_task_comment_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alertdialog_tv_comment_buttons"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="right"
+                android:padding="10dp">
+
+
+                <Button
+                    android:id="@+id/btn_comment_task_cancel"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/light_red"
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_comment_task_submit"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Submit"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.cardview.widget.CardView>

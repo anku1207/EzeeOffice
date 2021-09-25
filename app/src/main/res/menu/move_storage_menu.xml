@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_move_storage_movehere"
+        android:title="Move here"
+        android:icon="@drawable/ic_move_to_inbox_black_24dp"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_move_storage_copyhere"
+        android:title="Copy here"
+        android:icon="@drawable/ic_move_to_inbox_black_24dp"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_move_storage_movefiles"
+        android:title="Move Files here"
+        android:icon="@drawable/ic_move_to_inbox_black_24dp"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_move_storage_copyfiles"
+        android:title="Copy Files here"
+        android:icon="@drawable/ic_move_to_inbox_black_24dp"
+        app:showAsAction="never" />
+
+
+
+</menu>

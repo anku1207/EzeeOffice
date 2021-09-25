@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:weightSum="1">
+
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90"
+            android:padding="5dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_version_docpath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90"
+            android:padding="5dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_version_docname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90"
+            android:padding="5dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_version_docid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90"
+            android:padding="5dp" />
+
+
+        <!--<ImageView-->
+            <!--android:background="?attr/selectableItemBackground"-->
+            <!--android:clickable="true"-->
+            <!--android:visibility="visible"-->
+            <!--android:padding="5dp"-->
+            <!--android:id="@+id/iv_version_option"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="0.10"-->
+            <!--app:srcCompat="@drawable/ic_more_vert_grey_24dp"-->
+            <!--android:focusable="true" />-->
+
+        <ImageView
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:visibility="visible"
+            android:padding="5dp"
+            android:id="@+id/iv_version_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            app:srcCompat="@drawable/fileview"
+            android:focusable="true" />
+
+        <ImageView
+            android:visibility="visible"
+            android:padding="3dp"
+            android:id="@+id/iv_version_view_meta"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            app:srcCompat="@drawable/ic_remove_red_eye_blue_24dp" />
+
+        <ImageView
+            android:visibility="visible"
+            android:padding="3dp"
+            android:id="@+id/iv_version_del"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            app:srcCompat="@drawable/ic_delete_black_24dp" />
+
+
+
+
+    </LinearLayout>
+
+     <View
+         android:id="@+id/view_version_decorator"
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:layout_marginTop="2dp"
+         android:background="@color/grey"/>
+
+
+</LinearLayout>

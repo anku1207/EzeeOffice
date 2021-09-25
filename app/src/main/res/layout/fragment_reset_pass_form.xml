@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".Fragments.ResetPassFormFragment">
+
+    <ScrollView
+        android:id="@+id/sv_frag_reset_pwd_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn_frag_reset_submit_form"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/changepassword" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Reset your password"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                 <TextView
+                     android:id="@+id/tv_reset_pwd_form_otp_countdown"
+                     android:layout_marginTop="5dp"
+                     android:textStyle="bold"
+                     android:textColor="@color/red"
+                     android:textSize="10dp"
+                     android:padding="5dp"
+                     android:gravity="center"
+                     android:text="OTP expires in 9.10 seconds"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_reset_pwd_form_enter_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp"
+                    android:textStyle="bold">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_reset_pwd_form_enter_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center_vertical"
+                        android:hint="Enter OTP"
+                        android:inputType="textPassword"
+                        android:textSize="13dp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/til_reset_pwd_form_enter_new_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:counterEnabled="true"
+                    app:counterTextAppearance="@color/red"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_reset_pwd_form_enter_new_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="Enter New Password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textSize="13dp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_reset_pwd_form_enter_confirm_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Password"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:counterEnabled="true"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:enabled="false"
+                        android:id="@+id/tie_reset_pwd_form_enter_confirm_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Confirm Password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textSize="13dp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_btn_frag_reset_submit_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btn_reset_pwd_form_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@color/light_red"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:enabled="false"
+            android:id="@+id/btn_reset_pwd_form_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/selector_btn_enable_disable"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

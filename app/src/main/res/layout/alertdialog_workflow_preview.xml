@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    android:id="@+id/ll_workflow_preview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_heading_preview"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:text="Preview"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <LinearLayout
+                android:padding="5dp"
+                android:id="@+id/ll_inflate_tablerow_preview_workflow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="visible"
+                android:gravity="center"
+                android:padding="10dp"
+                android:id="@+id/tv_preview_workflow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_below="@+id/scrollview_preview"
+                android:padding="10dp"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_workflow_close"
+                    android:textColor="@color/white"
+                    android:text="Close"
+                    android:background="@color/light_red"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp" />
+
+                <Button
+                    android:id="@+id/btn_workflow_submit"
+                    android:textColor="@color/white"
+                    android:text="Submit"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>

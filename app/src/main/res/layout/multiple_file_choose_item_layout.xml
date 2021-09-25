@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_multichoose_filetype"
+            android:padding="10dp"
+            app:srcCompat="@drawable/pdf"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_multichoose_filename"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:text="File name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:id="@+id/tv_multichoose_filesize"
+                android:padding="4dp"
+                android:text="0.3 mb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

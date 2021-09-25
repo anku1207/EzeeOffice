@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY nbsp "&#160;">]>
+
+<resources>
+    <string name="app_name">EzeeOffice</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <item name="spinnerProject" type="id">
+
+
+    </item>
+    <item name="spinnerLocation" type="id">
+
+    </item>
+
+
+    <string name="ezeeoffice_about">EzeeOffice Document Management System.
+Track, manage and store your documents and reduce paper.</string>
+    <string name="verification_code_subtext">Please type the verification code sent to +xxxxxxxxxx or on mail</string>
+    <string name="verification_code_auto_catch_otp">(Enter the OTP mannually in case we fail to detect it automatically)</string>
+
+
+    <string name="tab_rv_activity_log">Activity Log</string>
+    <string name="tab_rv_review_log">Review Log</string>
+
+
+    <!-- used in task_Approve_activity-->
+    <string name="assign_user">Assign user</string>
+    <string name="alternate_user">Alternate User</string>
+    <string name="select_supervisor">Select Supervisor</string>
+    <string name="deadline">Deadline</string>
+    <string name="order">Order</string>
+
+
+    <!-- Toast -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+</resources>

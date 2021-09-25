@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_recyclebin_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="7dp"
+    app:cardUseCompatPadding="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_root_recyclebinlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageView
+
+                android:id="@+id/recyclebin_list_iv_filetype"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.20"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/pdf" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.80">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tv_recyclebin_list_filename"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0.98"
+                            android:padding="3dp"
+                            android:text="Gradle.bat"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_recyclebin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.02"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="File Extension"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="File size"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tv_recyclebin_list_fileextension"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="24kb"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_recyclebin_list_filesize"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="3dp"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Storage name"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_recyclebin_list_storagename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="testing"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_recyclebin_list_docid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="testing"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_recyclebin_list_docpath"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="testing"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_recyclebin_list_docdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="testing"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center">
+
+            <View
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@color/dark_grey" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="right"
+            android:padding="5dp"
+            android:weightSum="1">
+
+            <Button
+
+                android:id="@+id/btn_delete_recyclebin_list"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/red"
+                android:drawableLeft="@drawable/ic_delete_white_24dp"
+                android:drawableStart="@drawable/ic_delete_white_24dp"
+                android:padding="5dp"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <Button
+
+                android:id="@+id/btn_restore_recyclebin_list"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@color/colorPrimaryDark"
+                android:drawableLeft="@drawable/ic_restore_white_24dp"
+                android:drawableStart="@drawable/ic_restore_white_24dp"
+                android:padding="5dp"
+                android:text="Restore"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

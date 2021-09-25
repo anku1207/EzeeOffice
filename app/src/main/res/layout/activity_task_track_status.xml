@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WorkFlow.TaskTrackStatusActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cv_tasktrackstatus_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_tasktrackstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Task Track Status"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rl_task_track_status_main"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_above="@+id/ll_tasktrackstatus_nooffile"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_above="@+id/pg_rv_task_track_status"
+                android:animateLayoutChanges="false"
+                android:focusableInTouchMode="false"
+                android:id="@+id/rv_tasktrackstatus_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ProgressBar
+                android:background="@color/transparent"
+                android:visibility="gone"
+                android:layout_margin="1dp"
+                android:id="@+id/pg_rv_task_track_status"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_tasktrackstatus_nooffile"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_tasktrackstatus_nooffile"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:text="0 file found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar_task_track_list"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/ll_task_tack_list_no_task_found"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_linear_scale_blue_100dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="No Task Found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

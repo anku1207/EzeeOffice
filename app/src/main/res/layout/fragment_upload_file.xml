@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Upload.UploadFileFragment">
+
+
+    <ScrollView
+        android:id="@+id/sv_upload_file_fragment"
+        android:layout_above="@+id/ll_upload_fragment_buttons"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@drawable/diagonal_layout_blue_half_rect"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_uploadfrag_dynamic_filetype"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/unsupported_file"
+                    android:visibility="visible" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_upload_fragment_upload_camera"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/green_normal"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:background="@color/grey_new">
+
+                        <ImageView
+                            android:id="@+id/iv_upload_fragment_upload_camera"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="TODO"
+                            android:cropToPadding="true"
+                            app:srcCompat="@drawable/png"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_file_Select_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/tv_upload_filepath"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:hint="No File Selected"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <Button
+
+                        android:id="@+id/btn_upload_choose_file"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:background="@color/colorPrimary"
+                        android:text="Choose File"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_upload_fragment_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:padding="3dp">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="left"
+            android:layout_weight="0.2"
+            android:background="@color/colorPrimary"
+            android:shadowColor="@color/grey"
+            android:text="back"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_weight="0.2"
+            android:background="@color/colorPrimary"
+            android:shadowColor="@color/grey"
+            android:text="next"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

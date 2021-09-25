@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_round_metadata_folder"
+            android:id="@+id/bottom_sheet_meta_icon"
+            android:layout_margin="2dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assigned Metadata" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/grey"
+        android:padding="5dp"
+        android:id="@+id/ll_bottomsheet_metadata_assigned"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/grey"
+            android:id="@+id/bottom_sheet_rv_metaview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

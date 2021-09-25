@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WorkFlow.InTrayActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cv_in_tray_workflow_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_in_tray_workflow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Workflow"
+                app:subtitle="In Tray"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_in_tray_main"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_above="@id/tv_in_tray_total_task"
+            android:id="@+id/rv_in_tray_workflow_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_in_tray_total_task"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="243 task found"
+            android:padding="7dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_in_tray_nofilefound"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_pen_blue"
+            android:layout_width="128dp"
+            android:layout_height="128dp" />
+        <TextView
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="No Task Found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="visible"
+        android:id="@+id/progressBar_in_tray"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

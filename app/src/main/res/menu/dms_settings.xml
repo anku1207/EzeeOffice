@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_dms_grid_switch"
+        android:title="Gridview"
+        android:icon="@mipmap/ic_grid"
+        app:showAsAction="always"
+        />
+    <item
+        android:visible="false"
+        android:id="@+id/action_dms_list_switch"
+        android:title="Listview"
+        android:icon="@mipmap/ic_list"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/action_dms_search"
+        android:title="Search Metadata"
+        android:icon="@drawable/ic_search_white_24dp"
+        app:showAsAction="always"
+         />
+
+
+
+
+    <item
+        android:id="@+id/action_upload_documents"
+        android:title="Upload Documents"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_create_new_child"
+        android:title="Create New Sub Folder"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_modify_storage"
+        android:title="Modify Storage"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_assign_metadata"
+        android:title="Assign Metadata"
+        app:showAsAction="never" />
+    <item
+        android:visible="false"
+        android:id="@+id/action_move_storage"
+        android:title="Move/Copy Storage"
+        app:showAsAction="never" />
+    <item
+        android:visible="false"
+        android:title="Copy Storage"
+        app:showAsAction="never" />
+
+</menu>

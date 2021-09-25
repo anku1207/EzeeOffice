@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:visible="false"
+        android:icon="@drawable/ic_file_download_white_24dp"
+        android:id="@+id/action_image_viewer_download"
+        android:orderInCategory="100"
+        android:title="Download Image"
+        app:showAsAction="always" />
+
+</menu>

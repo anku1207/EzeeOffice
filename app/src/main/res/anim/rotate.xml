@@ -1,0 +1,15 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/bounce_interpolator">
+
+
+    <rotate
+        android:pivotX="50%"
+        android:fromDegrees="0"
+        android:pivotY="50%"
+        android:toDegrees="360"
+        android:duration="2800">
+
+    </rotate>
+
+</set>

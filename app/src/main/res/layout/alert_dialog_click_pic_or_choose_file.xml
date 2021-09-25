@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_aproved_reject_take_photo"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_aproved_reject_take_photo"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/camera"
+                android:layout_width="52dp"
+                android:layout_height="52dp" />
+            <TextView
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Take a picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:padding="3dp"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.35"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="0dp"
+            android:layout_height="2dp"/>
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="or"
+            android:layout_weight="0.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.35"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="0dp"
+            android:layout_height="2dp"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/ll_aproved_reject_choose_file"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_aproved_reject_choose_file"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/filemanger"
+                android:layout_width="52dp"
+                android:layout_height="52dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Choose File"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_ad_choose_pic_file_cancel"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:text="cancel"
+            android:textColor="@color/red"
+            android:background="@color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

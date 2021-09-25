@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_pdf_viewer_log"
+        android:title="Log"
+       />
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_pdf_viewer_download"
+        android:title="Download"
+       />
+
+</menu>

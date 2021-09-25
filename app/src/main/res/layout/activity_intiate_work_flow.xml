@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    tools:context=".Activity.WorkFlow.IntiateWorkFlowActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_intiateworkflow_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_intiateworkflow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Initiate WorkFlow"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/et_get_workflow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_get_workflow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="get workflow"
+        android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_intiateWorkflow_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ScrollView
+                android:id="@+id/sv_intiate_workflow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/ll_intiateworkflow_footer"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:id="@+id/ll_intiateworkflow_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!--  cashVoucher-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_cash_voucher_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:padding="5dp"
+                                android:text="Mode Of Conveyance"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_rect_5"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/sp_mode_of_conveyance"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp">
+
+                                </Spinner>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:padding="5dp"
+                                android:text="Purpose"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/et_intiate_workflow_purpose"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/shape_rect_5"
+                                android:hint="Purpose"
+                                android:padding="10dp"
+                                android:textSize="13sp" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:padding="5dp"
+                                android:text="Description"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/shape_rect_5"
+                                android:hint="Description"
+                                android:padding="10dp"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--Addmore CashvOucher-->
+
+                            <LinearLayout
+                                android:id="@+id/ll_add_more_rupee_paisa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/transparent"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:weightSum="1">
+
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_marginBottom="5dp"
+                                                android:layout_weight="0.80"
+                                                android:padding="5dp"
+                                                android:text="Description"
+                                                android:textColor="@color/colorPrimaryDark"
+                                                android:textStyle="bold" />
+
+                                            <ImageButton
+                                                android:id="@+id/ib_intiateworkflow_add_more"
+                                                android:layout_width="0dp"
+                                                android:layout_height="50dp"
+                                                android:layout_weight="0.20"
+                                                android:background="@color/transparent"
+                                                app:srcCompat="@drawable/ic_add_box_blue_24dp"
+                                                android:tooltipText="Add More" />
+
+
+                                        </LinearLayout>
+
+                                        <EditText
+                                            android:id="@+id/et_intiate_workflow_description"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:background="@drawable/shape_rect_5"
+                                            android:padding="10dp"
+                                            android:textSize="13sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_weight="0.80"
+                                            android:padding="5dp"
+                                            android:text="Rupees"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/et_intiateworkflow_rupee"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:background="@drawable/shape_rect_5"
+                                            android:hint="Rupees"
+                                            android:inputType="number"
+                                            android:maxLength="9"
+                                            android:padding="10dp"
+                                            android:textSize="13sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:padding="5dp"
+                                            android:text="Paisa"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/et_intiateworkflow_paisa"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:layout_marginBottom="15dp"
+                                            android:background="@drawable/shape_rect_5"
+                                            android:hint="Paisa"
+                                            android:inputType="number"
+                                            android:maxLength="9"
+                                            android:padding="10dp"
+                                            android:textSize="13sp" />
+
+
+                                    </LinearLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                            <!--
+                            not used-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_add_more"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="5dp"
+                            android:text="Total Rupees"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_intial_workflow_total_rupee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/shape_rect_5"
+                            android:enabled="false"
+                            android:hint="Ex: 100 Rupees"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="5dp"
+                            android:text="Total Amount"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_intial_workflow_total_rupee_words"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/shape_rect_5"
+                            android:enabled="false"
+                            android:hint="Ex: One Hundered Only"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+
+                    </LinearLayout>
+
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_intitiate_workflow_attach_Doc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:buttonTint="@color/white"
+                                android:padding="10dp"
+                                android:text="Attach Document (Optional)"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_intiateworkflow_browsefiles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/grey"
+                                    android:padding="10dp"
+                                    android:text="Choose File"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_intiateworkflow_nofileselected"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        app:srcCompat="@drawable/file" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:text="No File Selected"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_intiatefile_multiple_choose"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:visibility="gone">
+
+
+                                </androidx.recyclerview.widget.RecyclerView>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:id="@+id/btn_intiate_workflow_browsefiles"
+                                        android:layout_width="0dp"
+                                        android:layout_height="35dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="0.5"
+                                        android:background="@color/colorPrimary"
+                                        android:text="Browse Files"
+                                        android:textColor="@color/white" />
+
+                                    <Button
+                                        android:id="@+id/btn_intiate_workflow_clear_list"
+                                        android:layout_width="0dp"
+                                        android:layout_height="35dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="0.5"
+                                        android:background="@color/light_red"
+                                        android:text="Clear"
+                                        android:textColor="@color/white"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/grey"
+                                    android:padding="10dp"
+                                    android:text="Select Storage"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tv_initiate_workflow_select_storage"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.80"
+                                        android:enabled="false"
+                                        android:hint="Please Select Storage"
+                                        android:padding="15dp"
+                                        android:textColor="@color/colorPrimary" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_initiate_workflow_select_storage"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.20"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_storage_darkblue_24dp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_initiate_workflow_select_storage_slid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/ll_intiateworkflow_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+
+                    <Button
+                        android:id="@+id/btn_intiate_workflow_reset"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        android:background="@color/light_red"
+                        android:text="Reset"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/btn_intiate_workflow_preview"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="Preview"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pb_intiateWorkflow_main"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/progressbar_rotate"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

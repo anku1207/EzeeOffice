@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:id="@+id/ll_manage_apt_todo_list_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_manage_todo_apt_list_taskname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="My Task"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tv_manage_todo_apt_list_task_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="This is the task description as the following "
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/tv_manage_todo_apt_list_notitime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_notifications_active_blue_24dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="2:13 PM"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_manage_todo_apt_list_tasktime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_access_time_blue_24dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="28-01-1996 2:13 PM"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:weightSum="1">
+
+
+            <Button
+                android:id="@+id/btn_manage_todo_apt_list_edit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0.50"
+                android:background="?attr/selectableItemBackground"
+                android:drawableLeft="@drawable/ic_create_white_15dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btn_manage_todo_apt_list_archive"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0.50"
+                android:background="?attr/selectableItemBackground"
+                android:drawableLeft="@drawable/ic_archive_white_15dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Archive"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

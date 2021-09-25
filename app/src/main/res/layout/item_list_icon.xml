@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearlayoutclickedinlist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_dms_hierarcy_folder_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        android:foreground="?attr/selectableItemBackground"
+        >
+
+        <LinearLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageview_fileview_foldericon"
+                    android:layout_width="75dp"
+                    android:layout_height="70dp"
+
+                    android:layout_gravity="center"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/ic_folder_light_blue_24dp" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="32dp"
+                    android:layout_alignEnd="@+id/imageview_fileview_foldericon"
+                    android:layout_height="32dp"
+                    app:srcCompat="@mipmap/emptyfolder"
+                    android:layout_alignRight="@+id/imageview_fileview_foldericon" />
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_dms_hierarcy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/imageview_fileview_foldericon"
+                    android:background="@drawable/shape_checkbox"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_fileview_foldername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="folder name"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_fileview_folder_slid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="folder name"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_fileview_folder_fullfoldername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="folder name"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_fileview_folder_checkblank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="folder name"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

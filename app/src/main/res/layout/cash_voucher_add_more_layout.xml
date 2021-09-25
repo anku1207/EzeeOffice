@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardElevation="5dp"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    app:cardUseCompatPadding="true">
+
+    <!--Addmore CashvOucher-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.80"
+                android:padding="5dp"
+                android:text="Description"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/ib_intiateworkflow_remove"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.20"
+                android:background="@color/transparent"
+                app:srcCompat="@drawable/ic_minus_blue_24dp"
+                android:tooltipText="Add More" />
+
+
+        </LinearLayout>
+
+
+        <EditText
+
+            android:padding="10dp"
+            android:id="@+id/et_intiateworkflow_desc_dynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect_5"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="Rupess"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:maxLength="9"
+            android:inputType="number"
+            android:padding="10dp"
+            android:id="@+id/et_intiateworkflow_rupee_dynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect_5"
+            android:hint="Rupees"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="Paisa"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_add_more_counter"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="Paisa"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:maxLength="9"
+            android:inputType="number"
+            android:padding="10dp"
+            android:id="@+id/et_intiateworkflow_paisa_dynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_rect_5"
+            android:hint="Paisa"
+            android:textSize="13sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

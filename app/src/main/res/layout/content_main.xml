@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipelayout_main_acitivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode ="true"
+    android:gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="Activity.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollview_main_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/half_rect_bg"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_dash_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_dashboard_white_24dp"
+                    android:drawableLeft="@drawable/ic_dashboard_white_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Dashboard"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="7dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <SearchView
+                            android:id="@+id/sv_quick_search_in_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_rect_7_white"
+                            android:iconifiedByDefault="false"
+                            android:maxLines="1"
+                            android:focusable="true"
+                            android:queryHint="Quick Search : Files , Documents ..."
+
+                            >
+
+                        </SearchView>
+
+
+                        <!--<EditText
+
+                            android:id="@+id/et_quick_search_in_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableLeft="@drawable/ic_search_blue_24dp"
+                            android:drawablePadding="10dp"
+                            android:hint="Quick Search : files,documents etc"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="13sp" />-->
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="4">
+
+
+                    <HorizontalScrollView
+                        android:id="@+id/hori_scroll_view_dashboard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.94"
+                        android:scrollbarDefaultDelayBeforeFade="1000"
+                        android:scrollbarFadeDuration="2000"
+                        android:scrollbarSize="3dp"
+                        android:scrollbars="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_dms_report_graph"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="370dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:background="@color/colorPrimary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="DMS REPORT"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="350dp">
+
+                                        <ProgressBar
+                                            android:id="@+id/pb_dms_report_chart"
+                                            android:layout_width="30dp"
+                                            android:layout_height="match_parent" />
+
+                                        <com.github.mikephil.charting.charts.PieChart
+                                            android:visibility="gone"
+                                            android:id="@+id/dms_report_chart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="350dp"
+                                            android:layout_margin="10dp" />
+
+                                    </LinearLayout>
+
+
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_workflow_status_graph"
+                                android:layout_width="370dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:background="@color/colorPrimary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="WORFLOW STATUS"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="350dp">
+
+
+                                        <ProgressBar
+                                            android:id="@+id/pb_workflow_status_chart"
+                                            android:layout_width="30dp"
+                                            android:layout_height="match_parent" />
+
+                                        <com.github.mikephil.charting.charts.PieChart
+                                            android:visibility="gone"
+                                            android:id="@+id/workflow_status_chart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="350dp"
+                                            android:layout_margin="10dp" />
+
+
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_workflow_priority_graph"
+                                android:layout_width="370dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:background="@color/colorPrimary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="WORFLOW PRIORITY"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="350dp">
+
+                                        <ProgressBar
+                                            android:id="@+id/pb_workflow_priority_chart"
+                                            android:layout_width="30dp"
+                                            android:layout_height="match_parent" />
+
+
+                                        <com.github.mikephil.charting.charts.PieChart
+                                            android:visibility="gone"
+                                            android:id="@+id/workflow_priority_chart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="350dp"
+                                            android:layout_margin="10dp" />
+
+
+                                    </LinearLayout>
+
+
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_memory_usage_chart"
+                                android:layout_width="370dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:background="@color/colorPrimary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_heading_memory_status_chart"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Memory Usage in (mb) "
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="350dp">
+
+                                         <ProgressBar
+                                             android:id="@+id/pb_memory_status_chart"
+                                             android:layout_width="30dp"
+                                             android:layout_height="match_parent" />
+
+                                        <com.github.mikephil.charting.charts.LineChart
+                                            android:visibility="gone"
+                                            android:id="@+id/memory_status_chart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="350dp"
+                                            android:layout_margin="10dp" />
+
+                                    </LinearLayout>
+
+
+
+
+
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_user_report_chart"
+                                android:layout_width="370dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:background="@color/colorPrimary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="User Report"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:gravity="center"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="350dp">
+
+                                         <ProgressBar
+                                             android:id="@+id/pb_user_report_chart"
+                                             android:layout_width="30dp"
+                                             android:layout_height="match_parent" />
+
+                                        <com.github.mikephil.charting.charts.BarChart
+                                             android:visibility="gone"
+                                            android:id="@+id/user_report_chart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="350dp"
+                                            android:layout_margin="10dp" />
+
+
+                                    </LinearLayout>
+
+
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_todo_dash"
+                                android:layout_width="370dp"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true">
+
+
+                                <LinearLayout
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="3dp"
+                                        android:background="@color/colorPrimary" />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="TO DO List"
+                                        android:textStyle="bold" />
+
+
+                                    <androidx.recyclerview.widget.RecyclerView
+
+                                        android:id="@+id/rv_todo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="10dp"
+                                        android:scrollbars="vertical"
+                                        android:visibility="gone">
+
+
+                                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                                    <ProgressBar
+                                        android:id="@+id/progressbar_todo_dashboard"
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent" />
+
+
+
+                                    <LinearLayout
+
+                                        android:id="@+id/ll_no_todo_found_dashboard"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            app:srcCompat="@drawable/todo"
+                                            android:layout_width="65dp"
+                                            android:layout_height="65dp" />
+
+                                        <TextView
+                                            android:padding="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:textStyle="bold"
+                                            android:text="No Todo Found"
+                                            android:textColor="@color/black"
+                                            android:textSize="13sp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_apt_dash"
+                                android:layout_width="370dp"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true">
+
+
+                                <LinearLayout
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="3dp"
+                                        android:background="@color/colorPrimary" />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="Appointment List"
+                                        android:textStyle="bold" />
+
+
+                                    <androidx.recyclerview.widget.RecyclerView
+
+
+                                        android:id="@+id/rv_appointment"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="10dp"
+                                        android:scrollbars="vertical"
+                                        android:visibility="gone">
+
+
+                                    </androidx.recyclerview.widget.RecyclerView>
+
+                                    <ProgressBar
+                                        android:id="@+id/progressbar_apt_dashboard"
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent" />
+
+                                    <LinearLayout
+
+                                        android:id="@+id/ll_no_apt_found_dashboard"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            app:srcCompat="@drawable/appointment"
+                                            android:layout_width="65dp"
+                                            android:layout_height="65dp" />
+
+                                        <TextView
+                                            android:padding="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:textStyle="bold"
+                                            android:text="No Appointment Found"
+                                            android:textColor="@color/black"
+                                            android:textSize="13sp" />
+
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_dashboard"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_calender_dash"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        app:cardElevation="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true"
+                        tools:ignore="MissingConstraints">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.applandeo.materialcalendarview.CalendarView
+                                app:todayLabelColor="@color/red"
+                                android:id="@+id/calender_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                />
+
+
+                            <!--here-->
+                            <androidx.cardview.widget.CardView
+                                app:cardElevation="8dp"
+                                app:cardUseCompatPadding="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:background="@color/colorPrimary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"/>
+                                <LinearLayout
+                                    android:gravity="center"
+                                    android:weightSum="3"
+                                    android:padding="4dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:padding="10dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:layout_gravity="center"
+                                            android:id="@+id/apttd"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            app:srcCompat="@drawable/appointment"
+                                            android:layout_alignParentLeft="true" />
+
+                                        <TextView
+                                            android:gravity="center"
+                                            android:textSize="13sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="3dp"
+                                            android:layout_below="@+id/apttd"
+                                            android:padding="5dp"
+                                            android:text="Appointment"
+                                            android:textColor="@color/black" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:padding="10dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:layout_gravity="center"
+                                            android:id="@+id/td"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            app:srcCompat="@drawable/todo"
+                                            android:layout_alignParentLeft="true" />
+
+                                        <TextView
+                                            android:gravity="center"
+                                            android:textSize="13sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_toRightOf="@+id/td"
+                                            android:padding="5dp"
+                                            android:text="Todo"
+                                            android:textColor="@color/black" />
+
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:padding="10dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+
+
+                                        <ImageView
+                                            android:layout_gravity="center"
+                                            android:id="@+id/apt"
+                                            android:layout_width="42dp"
+                                            android:layout_height="30dp"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            app:srcCompat="@drawable/multi_event"
+                                            android:layout_alignParentLeft="true" />
+
+                                        <TextView
+                                            android:gravity="center"
+                                            android:textSize="13sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="1dp"
+                                            android:layout_toRightOf="@+id/apt"
+                                            android:padding="5dp"
+                                            android:text="Both"
+                                            android:textColor="@color/black" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <RelativeLayout
+                                    android:padding="5dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                </RelativeLayout>
+                                <RelativeLayout
+
+                                    android:padding="5dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+                          <!--  <android.support.v7.widget.CardView
+                                app:cardElevation="8dp"
+                                app:cardUseCompatPadding="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:background="@color/colorPrimary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"/>
+                                <LinearLayout
+
+                                    android:padding="4dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:padding="5dp"
+                                        android:gravity="center_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/apttd"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/appointment"
+                                            android:layout_alignParentLeft="true" />
+
+                                        <TextView
+                                            android:textSize="13sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="3dp"
+                                            android:layout_below="@+id/apttd"
+                                            android:padding="5dp"
+                                            android:text="Appointment"
+                                            android:textColor="@color/black" />
+                                    </RelativeLayout>
+                                    <RelativeLayout
+                                        android:padding="5dp"
+                                        android:gravity="center_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/td"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/todo"
+                                            android:layout_alignParentLeft="true" />
+
+                                        <TextView
+                                            android:textSize="13sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_toRightOf="@+id/td"
+                                            android:padding="5dp"
+                                            android:text="Todo"
+                                            android:textColor="@color/black" />
+                                    </RelativeLayout>
+                                    <RelativeLayout
+
+                                        android:padding="5dp"
+                                        android:gravity="center_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/apt"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/multi_event"
+                                            android:layout_alignParentLeft="true" />
+
+                                        <TextView
+                                            android:textSize="13sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="1dp"
+                                            android:layout_toRightOf="@+id/apt"
+                                            android:padding="5dp"
+                                            android:text="Appointment and Todo both"
+                                            android:textColor="@color/black" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>-->
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_mainactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/progressbar_rotate"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10"
+            android:baselineAligned="false">
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_audit_workflow_list_sno"
+                    android:background="@drawable/shape_rect"
+                    android:textSize="13sp"
+                    android:padding="12dp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="Sr.no 1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="User Name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:layout_weight="0.7"
+                        android:id="@+id/tv_audit_workflow_list_username"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="Action Performed"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_weight="0.7"
+                        android:id="@+id/tv_audit_workflow_list_actionperformed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:weightSum="1">
+
+
+
+
+                    <TextView
+
+                        android:id="@+id/tv_audit_workflow_list_actionstartdate_label"
+                        android:textSize="13dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="Action Date Time"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_weight="0.7"
+                        android:id="@+id/tv_audit_workflow_list_actionstartdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_audit_workflow_list_action_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:weightSum="1">
+
+                    <TextView
+
+                        android:textSize="13dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="Action End Date"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_weight="0.7"
+                        android:layout_width="0dp"
+                        android:id="@+id/tv_audit_workflow_list_actionenddate"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="System IP"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_weight="0.7"
+                        android:layout_width="0dp"
+                        android:id="@+id/tv_audit_workflow_list_sytemip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="Remarks"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textSize="13dp"
+                        android:layout_weight="0.7"
+                        android:layout_width="0dp"
+                        android:id="@+id/tv_audit_workflow_list_remarks"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:textSize="13dp"
+                        android:layout_weight="0.7"
+                        android:layout_width="0dp"
+                        android:id="@+id/tv_audit_workflow_list_docid"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

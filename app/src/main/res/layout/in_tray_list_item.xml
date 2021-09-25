@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:layout_weight="0.20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_in_tray_item_action"
+                android:layout_gravity="center"
+                app:srcCompat="@mipmap/task_track_icon"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_weight="0.80"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+         <TextView
+
+             android:textStyle="bold"
+             android:text="Task"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+           <TextView
+               android:id="@+id/tv_in_tray_item_taskname"
+               android:textSize="13sp"
+               android:textColor="@color/black"
+               android:layout_marginTop="5dp"
+               android:text="for annotation test"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:text="Priority"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:text="Status"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_in_tray_item_priority"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:padding="7dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/taskstatus_background"
+                    android:text="Normal"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_in_tray_item_status"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:padding="7dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/taskstatus_background"
+                    android:text="Pending"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_in_tray_item_warning"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tv_in_tray_item_warning"
+                    android:textColor="@color/red"
+                    android:textSize="10dp"
+                    android:text="Rejected from last"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:text="Assigned Date"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:text="Deadline"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_in_tray_item_assigned_date"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:text="12-03-2018 10:35:08"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_in_tray_item_deadline"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:text="0 Seconds"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="Started By"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_in_tray_item_started_by"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:text="Ajay Kumar Sharma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_in_tray_item_docid"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:text="docid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_in_tray_item_taskid"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:text="taskid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="@color/dark_grey"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+
+                    android:background="?attr/selectableItemBackground"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_in_tray_viewdocument"
+                    android:layout_marginTop="5dp"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/ic_remove_red_eye_blue_24dp"
+                    android:text="View Document"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="35dp" />
+
+
+                <Button
+                    android:background="?attr/selectableItemBackground"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_in_tray_task_action"
+                    android:layout_marginTop="5dp"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/ic_edit_blue_24dp"
+                    android:text="Task Approve/Reject"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="35dp" />
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

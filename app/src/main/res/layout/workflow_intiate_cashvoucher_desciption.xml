@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/table_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/shape_rect_6"
+            android:padding="10dp"
+            android:text="Desciption"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_description_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_bg"
+            android:padding="10dp"
+            android:text="description"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/table_bg"
+            android:padding="10dp"
+            android:text="Amount"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_desciption_value_amount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/table_bg"
+            android:padding="10dp"
+            android:text="0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_key"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/table_bg"
+            android:padding="10dp"
+            android:text="Paise"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_desciption_value_paisa"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/table_bg"
+            android:padding="10dp"
+            android:text="0" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

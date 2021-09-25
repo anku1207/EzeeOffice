@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:text="Appointment Description"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Test Task"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="11-12-2018"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Time"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="10:01 AM"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Notification Time"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_notitime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="10:01 AM"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Notification Frequency"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_notifreq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Same Day"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Agenda"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_agenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="3dp"
+                android:text="Retrofit"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Contact Name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="3dp"
+                android:text="Ankit"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Contact Email"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="123@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Notes"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_appointment_list_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="3dp"
+                android:text="for annotation test"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

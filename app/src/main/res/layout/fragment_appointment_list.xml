@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    tools:context=".Fragments.AppointmentListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rv_tabbed_appointmentlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_tabbed_appointmentlist"
+        android:layout_gravity="center"
+        android:layout_width="30dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_notodofound_tabbed_appointmentlist"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            app:srcCompat="@drawable/appointment"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:textSize="13sp"
+            android:padding="10dp"
+            android:text="No Appointment Found"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

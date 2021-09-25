@@ -1,0 +1,128 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Mail Document"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ad_tie_share_files_mail_enter_email_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_contact_mail_grey_24dp"
+                            android:hint="Enter Email id"
+                            android:inputType="textEmailAddress"
+                            android:textSize="13sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ad_tie_share_files_mail_enter_subject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_edit_grey_24dp"
+                            android:hint="Enter Subject"
+                            android:textSize="13sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <EditText
+                        android:id="@+id/ad_et_share_files_mail_enter_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_rect_5"
+                        android:gravity="left"
+                        android:hint="Enter Message"
+                        android:padding="7dp"
+                        android:textSize="13sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/ad_btn_share_files_mail_close"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:text="close"
+                            android:textColor="@color/colorPrimary" />
+
+                        <Button
+                            android:id="@+id/ad_btn_share_files_mail_send"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Send"
+                            android:textColor="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>

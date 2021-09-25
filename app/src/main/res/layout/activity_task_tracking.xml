@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/swipelayout_task_track_timeline"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WorkFlow.TaskTrackingActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_task_tracking_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_task_tracking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    app:navigationIcon="@drawable/ic_back"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:title="Task Tracking"
+                    app:titleTextColor="@color/white">
+
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll_task_track_main"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:padding="3dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="Ticket Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:padding="3dp"
+                        android:textColor="@color/white"
+                        android:text="MRF_54_1531909918"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!--   <ListView
+                   android:id="@+id/timeline_task_tracking_listview"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:divider="@null"
+                   android:dividerHeight="0dp" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_taskTracking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBar_task_track"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/ll_task_tack_no_task_found"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                app:srcCompat="@drawable/ic_linear_scale_blue_100dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="No Task Found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

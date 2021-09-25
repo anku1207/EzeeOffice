@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <androidx.drawerlayout.widget.DrawerLayout
+    android:layout_below="@+id/cv_storage_management_toolbar"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/dmsactivity_drawer_layout_left"
+     android:fitsSystemWindows="true"
+     tools:openDrawer="start"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dms_app_bar_main"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_dms_nav_left_drawer_root"
+        android:fitsSystemWindows="true"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.navigation.NavigationView
+            android:visibility="gone"
+            android:background="@color/grey"
+            android:id="@+id/dmsactivity_nav_view_left"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:headerLayout="@layout/dmsactivity_search_nav_left"
+            >
+
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </LinearLayout>
+
+
+
+
+ </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+

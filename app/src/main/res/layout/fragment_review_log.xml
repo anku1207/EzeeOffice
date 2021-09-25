@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".Fragments.ReviewLogFragment"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/pb_review_log"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_review_log"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/tv_review_log_no_log_found"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No Review Log found"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+</LinearLayout>

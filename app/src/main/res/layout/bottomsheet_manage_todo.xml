@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:text="Todo Description"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Task Name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_todo_list_taskname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Test Task"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Task Date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_todo_list_taskdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="11-12-2018"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Task Time"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/bs_tv_manage_todo_list_tasktime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="10:01 AM"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Task Notification Frequency	"
+                android:textStyle="bold" />
+
+
+            <TextView
+
+                android:id="@+id/bs_tv_manage_todo_list_tasknotifreq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Same Day"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Notification Time"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_todo_list_notitime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="10:01 AM"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Task Description"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bs_tv_manage_todo_list_task_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="for annotation test"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

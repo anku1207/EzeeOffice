@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_archive_alert_close_popup"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_archive_alert_close_popup"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_archive_red_128dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Are you sure ?"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_archive_alert_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/grey"
+                android:padding="10dp"
+                android:text="Are you sure you want to Archive To Do"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="12dp" />
+
+
+            <Button
+                android:id="@+id/btn_archieve_alert_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/light_red"
+                android:text="Archive"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

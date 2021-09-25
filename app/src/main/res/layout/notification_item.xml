@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_notification_item_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_noti_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            app:srcCompat="@drawable/appointment" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_noti_taskname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:padding="7dp"
+                    android:text="Taskname"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_noti_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/taskstatus_reinitiate_bg"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="Appointment"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_noti_taskdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="taskdate"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

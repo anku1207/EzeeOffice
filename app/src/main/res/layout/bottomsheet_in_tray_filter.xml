@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:drawableLeft="@drawable/ic_compare_arrows_blue_24dp"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:text="Filter"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey"
+       >
+
+        <Spinner
+            android:id="@+id/in_tray_filter_spinner_select_status"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey"
+       >
+
+        <Spinner
+            android:id="@+id/in_tray_filter_spinner_select_priority"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <EditText
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Start Date"
+            android:textSize="13sp"
+            android:id="@+id/in_tray_filter_et_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:background="@drawable/shape_rect_3"
+            android:drawableEnd="@drawable/calender"
+            android:drawableRight="@drawable/calender"
+            android:padding="7dp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="to"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <EditText
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="End Date"
+            android:textSize="13sp"
+            android:id="@+id/in_tray_filter_et_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:background="@drawable/shape_rect_3"
+            android:drawableEnd="@drawable/calender"
+            android:drawableRight="@drawable/calender"
+            android:padding="7dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey"
+       >
+
+        <Spinner
+
+            android:id="@+id/in_tray_filter_spinner_select_assignby"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+        </Spinner>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/in_tray_filter_btn_apply_filter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.40"
+            android:background="@color/colorPrimary"
+            android:text="Apply Filter"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/in_tray_filter_btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.40"
+            android:background="@color/light_yellow"
+            android:text="Reset"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

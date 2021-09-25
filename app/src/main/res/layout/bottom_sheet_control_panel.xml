@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:drawableLeft="@drawable/ic_tune_blue_24dp"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:text="Control Panel"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <Button
+            android:enabled="false"
+            android:visibility="visible"
+            android:id="@+id/btn_in_tray_control_panel_document_properties"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="false"
+            android:text="Document Properties"
+            android:textColor="@color/white"
+            android:background="@color/colorprimarydark_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_in_tray_control_panel_approve_reject_task"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="false"
+            android:text="Approved / Rejected Task"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_in_tray_control_panel_comment_task"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="false"
+            android:text="Comment Task"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

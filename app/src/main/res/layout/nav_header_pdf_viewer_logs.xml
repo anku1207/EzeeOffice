@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:fitsSystemWindows="true"
+    android:id="@+id/ll_view_pager_logs"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/pdf_viewer_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            app:tabBackground="@color/colorPrimary"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white" />
+
+        <in.cbslgroup.ezeeoffice.Utils.NonSwipeableViewPager
+            android:visibility="visible"
+            android:id="@+id/pdf_viewer_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/grey" />
+
+</LinearLayout>

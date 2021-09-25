@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Todo.AddToDoActivity">
+
+
+    <LinearLayout
+        android:background="@color/grey"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_add_new_todo_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_add_new_todo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    app:navigationIcon="@drawable/ic_back"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:subtitle="Add To do"
+                    app:title="To do"
+                    app:titleTextColor="@color/white">
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/sv_add_todo_main"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <View
+                            android:background="@color/light_red"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_todo_add_info"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableLeft="@drawable/ic_warning_red_24dp"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="Note : Required fields are marked with a(*)"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <LinearLayout
+                        android:focusableInTouchMode="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:textStyle="bold"
+                            android:id="@+id/tv_add_todo_task_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="Task Name"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+
+                        <EditText
+                            android:id="@+id/et_add_todo_task_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Enter task name"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/tv_add_todo_task_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="Task Date"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+                        <EditText
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:id="@+id/et_add_todo_task_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Select task date"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/tv_add_todo_task_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="Task Time"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <EditText
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:drawableRight="@drawable/ic_access_time_black_24dp"
+                            android:id="@+id/et_add_todo_task_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Enter task time"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/tv_add_todo_noti_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="Notification Time"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+                        <EditText
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:drawableRight="@drawable/ic_access_time_black_24dp"
+                            android:id="@+id/et_add_todo_noti_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Enter Notification time"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_add_todo_noti_freq"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="Task Notification Frequency"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/grey"
+                            android:padding="10dp">
+
+                            <Spinner
+                                android:id="@+id/sp_todo_freq"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </Spinner>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_add_todo_select_user"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="Select User"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <in.cbslgroup.ezeeoffice.Chip.UsernameCompletionView
+                            android:id="@+id/autocomplete_tv_select_user_add_todo_activity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/shape_rect_7_white"
+                            android:dropDownHeight="150dp"
+                            android:dropDownSelector="@color/grey"
+                            android:focusableInTouchMode="true"
+                            android:hint="Select users"
+                            android:imeOptions="actionDone"
+                            android:inputType="text|textNoSuggestions|textMultiLine"
+                            android:maxLines="9"
+                            android:nextFocusDown="@+id/editText"
+                            android:padding="10dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/tv_add_todo_task_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="Task Description"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+                        <EditText
+                            android:id="@+id/et_add_todo_task_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Enter Task Description"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+                        <LinearLayout
+                            android:weightSum="1"
+                            android:padding="10dp"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/btn_add_todo_submit"
+                                android:textColor="@color/white"
+                                android:background="@color/colorPrimaryDark"
+                                android:textSize="13dp"
+                                android:text="Submit"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp" />
+                            <Button
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:id="@+id/btn_add_todo_cancel"
+                                android:textColor="@color/white"
+                                android:layout_marginLeft="5dp"
+                                android:background="@color/light_red"
+                                android:textSize="13dp"
+                                android:text="cancel"
+                                android:layout_height="40dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/pb_add_todo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

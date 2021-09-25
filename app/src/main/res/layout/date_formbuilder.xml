@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_date_formbuilder"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_heading_date_formbuilder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:padding="5dp"
+        android:text="label"
+        android:textColor="@color/colorPrimaryDark" />
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:enabled="true"
+            android:focusable="false"
+            android:inputType="datetime"
+            android:hint="Enter Date"
+            android:id="@+id/et_heading_date_formbuilder"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_rect_5"
+            android:drawableRight="@drawable/calender"
+            android:padding="10dp"
+            android:textSize="13sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

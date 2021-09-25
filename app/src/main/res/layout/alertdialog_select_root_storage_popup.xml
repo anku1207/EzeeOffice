@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/ll_cv_mv_select_storage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Select Storage"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="You have multiple storage alloted choose any 1 to continue"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_mv_cpy_select_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape_rect_3">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/btn_cpy_mv_cancel_popup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_red"
+                android:text="Cancel"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>
